@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface DropDownMenuProps {
-  onClose: () => void; // Add scrollToServices function to props
+  onClose: () => void;
 }
 
 const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
@@ -35,6 +35,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <Link
           href="#uxdesign"
           className="text-white text-2xl hover:text-[#CBACF9] duration-300"
+          onClick={onClose}
         >
           Ux Design
         </Link>
@@ -42,6 +43,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <Link
           href="#siteweb"
           className="text-white text-2xl hover:text-[#CBACF9]  duration-300"
+          onClick={onClose}
         >
           Site Web
         </Link>
@@ -50,6 +52,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <Link
           href="#temoignages"
           className="cursor-pointer text-white text-2xl hover:text-[#CBACF9] duration-300"
+          onClick={onClose}
         >
           Temoignages
         </Link>
@@ -57,17 +60,19 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <Link
           href="#seo"
           className="cursor-pointer text-white text-2xl hover:text-[#CBACF9] duration-300"
+          onClick={onClose}
         >
           SEO
         </Link>
 
         <div className="flex space-x-6">
-          <a
-            href="#"
+          <Link
+            href="/emails"
             className="cursor-pointer bg-gradient-to-r from-purple to-purple-500 py-2 px-3 rounded-md font-bold"
+            onClick={onClose}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>

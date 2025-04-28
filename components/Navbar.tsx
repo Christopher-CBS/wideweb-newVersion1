@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container px-4  mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <Link href="/">
+            <Link href="/" onClick={closeDropDown}>
               <img className="h-30 w-20 mr-2" src={wideweb2.src} alt="Logo" />
             </Link>
           </div>
@@ -33,6 +33,7 @@ const Navbar = () => {
                   <a
                     href={item.url}
                     className="hover:text-[#CBACF9] transition-colors duration-300"
+                    onClick={closeDropDown}
                   >
                     {item.title}
                   </a>
@@ -40,6 +41,7 @@ const Navbar = () => {
                   <Link
                     href={item.url}
                     className="hover:text-[#CBACF9] transition-colors duration-300"
+                    onClick={closeDropDown}
                   >
                     {item.title}
                   </Link>
@@ -51,6 +53,7 @@ const Navbar = () => {
             <Link
               href={"/emails"}
               className="bg-gradient-to-r from-purple to-purple-500 py-2 px-3 rounded-md font-bold"
+              onClick={closeDropDown}
             >
               Contact
             </Link>
